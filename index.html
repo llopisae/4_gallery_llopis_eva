@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P4 GALARY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 32px;
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
+        a{
+            text-decoration: none;
+            font-family: 'Assistant', sans-serif; 
+            text-transform: uppercase;
+            color: var(--verde);
+            margin: 20px;
+        }
+        :root {
+            --verde: #58602a;
+            --gris: #d2d2c7;
+            --grisoscuro: #313538; 
+            --verdeclaro: #acb673; 
+            --playfair: 'Playfair Display', serif;
+            --assistant: 'Assistant', sans-serif;
+        }
+        .container{
+            padding:0 2em;
+        }
+        /*Aquí va todo lo del header*/
+        body>header{
+            padding: 50px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            height: 100vh;
+            background-color: var(--verdeclaro);
+        }
+        h1{
+            font-family: 'Playfair Display', serif; 
+            font-weight: 700;
+            color: var (--grisoscuro);
+            font-size: 2em;
+        }
+        h2{
+            font-family: 'Assistant', sans-serif;
+            font-weight: 400;
+            color: var (var(--grisoscuro));
+            font-size: 1.2em;
+        }
+        h3{
+            font-family: var(--assistant);
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1em;
+        }
+        nav a{
+            font-size: 0.75em;
+        }
+        /*Aquí va todo lo del main*/
+        /*Tipos de diseño*/
+        #DISEÑADORES{
+            background-color: beige;
+        }
+        section:first-child .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        section:first-child h2{
+            color: black;
+            text-align: center;
+            font-family: var(--playfair);
+        }
+        .card_tipos{
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            margin: 0.75em;
+            align-items: center;
+            width: 300px;
+            padding: 0.25em;
+        }
+        .tipos_img{
+            width: 250px;
+            height: 250px;
+        }
+        .tipos_img img{
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 250px;
+            box-shadow: black 0px 0px 20px;
+        }
+        .card_tipos header{
+            text-align: center;
+            margin-top: 0.75em;
+        }
+        .card_tipos header h3{
+            color: var(--grisoscuro);
+        }
+        .card_tipos header blockquote{
+            font-family: var(--playfair);
+            font-size: 0.5em;
+        }
+        /*Aquí va section PROYECTOS*/
+        #PROYECTOS{
+            padding: 1.75em;
+        }
+        #projectes .container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        section:last-child{
+            height: 100%;
+            background-color: var(--verdeclaro);
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        section:last-child h2{
+            color: black;
+            text-align: center;
+            font-family: var(--playfair);
+        }
+        .projectes{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            flex-grow: 1;
+            max-width: 800px;
+            min-width: 250px;
+            min-height: 350px;
+            padding: 0.5em;
+            margin: 0.3em;
+            background-color: white;
+        }
+        .projectes_img{
+            display: flex;
+            width: 100%;
+            height: 250px;
+        }
+        .projectes .projectes_img img{
+            object-fit: cover;
+            flex-grow: 1;
+            object-position: center;
+        }
+        .projectes header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            flex-grow: 1;
+        }
+        .projectes h3{
+            font-size: 1em;
+            font-family: var(--playfair);
+        }
+        /*Aquí va todo lo del footer*/
+        footer{
+            height: 25vh;
+            padding: 2em;
+        }
+        footer h3{
+            font-weight: 100;
+            font-size: 1em;
+            text-align: left;
+        }
+        footer .container{
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 0.75em;
+        }
+        footer p{
+            width: 17%;
+        }
+        footer p:last-child{
+            width: 50%;
+            text-align: right;
+        }
+        footer p a{
+            font-size: 00.5em;
+            text-transform: capitalize;
+            font-family: var(--playfair);
+        }
+        @media (max-width:550px){
+            html{
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container"> 
+        <hgroup>
+            <h1>LETA SOBIERAJSKI</h1>
+            <h2>Combina elementos de diseño gráfico tradicional con fotografía, arte y estilismo</h2>
+        </hgroup>
+        <nav>
+            <a href="#DISEÑADORES">DISEÑADORES</a>
+            <a href="#PROYECTOS">PROYECTOS</a>
+            <a href="#rrss">redes</a>
+        </nav>
+        </div>
+    </header>
+    <main>
+        <section id="DISEÑADORES">
+            <h2>Diseñadores</h2>
+            <div class="container">
+                <div class="card_tipos">
+                    <div class="tipos_img">
+                        <img src="img/DAVID CARSON.jpeg" alt="">
+                    </div>
+                    <header>
+                        <h3>David carson</h3>
+                        <blockquote>
+                            «El diseño gráfico salvará al mundo justo después del rock and roll»
+                        </blockquote>
+                    </header>
+                </div>
+                <div class="card_tipos">
+                    <div class="tipos_img">
+                        <img src="img/isidro-ferrer.jpeg" alt="">
+                    </div>
+                    <header>
+                        <h3>Isidro Ferrer</h3>
+                        <blockquote>
+                            «Se debería enseñar a pensar»
+                        </blockquote>
+                    </header>
+                </div>
+                <div class="card_tipos">
+                    <div class="tipos_img">
+                        <img src="img/Sagmeister.jpeg" alt="">
+                    </div>
+                    <header>
+                        <h3>Stefan Sagmeister</h3>
+                        <blockquote>
+                            «Puedes tener una experiencia artística frente a un Rembrandt … o frente a una pieza de diseño gráfico»
+                        </blockquote>
+                    </header>
+                </div>
+            </div>
+        </section>
+        <section id="PROYECTOS">
+            <h2>Proyectos de Leta Sobierajski</h2>
+            <div class="container">
+                <div class="projectes">
+                    <div class="projectes_img">
+                        <img src="img/RIPOSTE_01.jpeg" alt="">
+                    </div>
+                    <header>
+                        <h3>Why Cursing is the Fucking Best</h3>
+                    </header>
+                </div>
+                <div class="projectes">
+                    <div class="projectes_img">
+                        <img src="img/RIPOSTE_02.jpg" alt="">
+                    </div>
+                    <header>
+                        <h3>Bizarre Beauty for Refinery29</h3>
+                    </header>
+                </div>
+                <div class="projectes">
+                    <div class="projectes_img">
+                        <img src="img/RIPOSTE_03.jpeg" alt="">
+                    </div>
+                    <header>
+                        <h3>Vogue Fashion’s Night Out Tokyo 2018</h3>
+                    </header>
+                </div>
+                <div class="projectes">
+                    <div class="projectes_img">
+                        <img src="img/RIPOSTE_04.jpeg" alt="">
+                    </div>
+                    <header>
+                        <h3>Healing From Another World for Showfields Miami</h3>
+                    </header>
+                </div>
+                <div class="projectes">
+                    <div class="projectes_img">
+                        <img src="img/RIPOSTE_05.jpeg" alt="">
+                    </div>
+                    <header>
+                        <h3>DanCassab x Leta Product Collaboration</h3>
+                    </header>
+                </div>
+                <div class="projectes">
+                    <div class="projectes_img">
+                        <img src="img/RIPOSTE_06.jpeg" alt="">
+                    </div>
+                    <header>
+                        <h3>Add/Ends</h3>
+                    </header>
+                </div>
+                <div class="projectes">
+                    <div class="projectes_img">
+                        <img src="img/RIPOSTE_07.jpeg" alt="">
+                    </div>
+                    <header>
+                        <h3>Inc Magazine Peak Ice</h3>
+                    </header>
+                </div>
+                <div class="projectes">
+                    <div class="projectes_img">
+                        <img src="img/RIPOSTE_08.jpeg" alt="">
+                    </div>
+                    <header>
+                        <h3>OFFF x 2017</h3>
+                    </header>
+                </div>
+                <div class="projectes">
+                    <div class="projectes_img">
+                        <img src="img/RIPOSTE_09.jpeg" alt="">
+                    </div>
+                    <header>
+                        <h3>Never Alone</h3>
+                    </header>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="rrss">
+        <h3>redes</h3>
+        <div class="container">
+            <p><a href="#">Instagram</a></p>
+            <p><a href="#">Facebook</a></p>
+            <p><a href="#">Twitter</a></p>
+            <p><a href="#">E-mail</a></p>
+        </div>
+    </footer>
+</body>
+</html>
